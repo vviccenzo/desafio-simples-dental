@@ -16,7 +16,7 @@ import com.simplesdental.application.category.usecase.GetAllCategoryUseCase;
 import com.simplesdental.application.category.usecase.UpdateCategoryUseCase;
 
 @Configuration
-public class CategoryConfig {
+public class CategoryConfiguration {
     
     @Bean
     public GetAllCategoryGateway getAllCategoryGateway(CategoryRepositoryGateway categoryRepositoryGateway) {

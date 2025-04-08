@@ -1,6 +1,9 @@
 package com.simplesdental.product.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,8 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-
-import java.util.List;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "categories")
@@ -20,12 +22,14 @@ public class Category {
     private Long id;
 
     @NotBlank
+    @Size(max = 100)
     private String name;
 
+    @Size(max = 255)
     private String description;
 
     @OneToMany(mappedBy = "category")
-    @JsonIgnoreProperties({"category"})
+    @JsonIgnoreProperties({ "category" })
     private List<Product> products;
 
     public Long getId() {

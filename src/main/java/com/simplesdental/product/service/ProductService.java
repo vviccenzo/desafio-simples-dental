@@ -1,12 +1,16 @@
 package com.simplesdental.product.service;
 
-import com.simplesdental.product.model.Product;
-import com.simplesdental.product.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.simplesdental.product.model.Product;
+import com.simplesdental.product.repository.ProductRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class ProductService {
@@ -19,18 +23,31 @@ public class ProductService {
     }
 
     public List<Product> findAll() {
-        return productRepository.findAll();
+        return this.productRepository.findAll();
     }
 
-    public Optional<Product> findById(Long id) {
-        return productRepository.findById(id);
+    public ResponseEntity<Product> findById(Long id) {
+        Optional<Product> product = this.productRepository.findById(id);
+        if (product.isPresent()) {
+            return ResponseEntity.ok(product.get());
+        }
+
+        return ResponseEntity.notFound().build();
     }
 
+    @Transactional(rollbackOn = Exception.class)
     public Product save(Product product) {
-        return productRepository.save(product);
+        return this.productRepository.save(product);
     }
 
-    public void deleteById(Long id) {
-        productRepository.deleteById(id);
+    @Transactional(rollbackOn = Exception.class)
+    public boolean deleteById(Long id) {
+        if (!this.productRepository.existsById(id)) {
+            return false;
+        }
+
+        this.productRepository.deleteById(id);
+
+        return true;
     }
 }

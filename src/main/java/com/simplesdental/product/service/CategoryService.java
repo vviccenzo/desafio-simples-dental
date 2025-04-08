@@ -19,18 +19,18 @@ public class CategoryService {
     }
 
     public List<Category> findAll() {
-        return categoryRepository.findAll();
+        return this.categoryRepository.findAll();
     }
 
     public Optional<Category> findById(Long id) {
-        return categoryRepository.findById(id);
+        return this.categoryRepository.findById(id);
     }
 
     public Category save(Category category) {
-        return categoryRepository.save(category);
+        return this.categoryRepository.save(category);
     }
 
     public void deleteById(Long id) {
-        categoryRepository.deleteById(id);
+        this.categoryRepository.deleteById(id);
     }
 }

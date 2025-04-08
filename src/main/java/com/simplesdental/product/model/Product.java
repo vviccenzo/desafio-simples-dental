@@ -34,7 +34,7 @@ public class Product extends Generic {
 
     @NotNull
     @Column(name = "status", nullable = false)
-    private Boolean status;
+    private Boolean status = true;
 
     @Column(name = "code", nullable = true)
     private String code;

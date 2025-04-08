@@ -3,9 +3,10 @@ package com.simplesdental.infra.category.persistence;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.simplesdental.infra.product.persistence.ProductEntity;
 import com.simplesdental.product.model.Generic;
-import com.simplesdental.product.model.Product;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -23,9 +24,9 @@ public class CategoryEntity extends Generic {
     @Size(max = 255)
     private String description;
 
-    @OneToMany(mappedBy = "category")
     @JsonIgnoreProperties({ "category" })
-    private List<Product> products;
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    private List<ProductEntity> products;
 
     public String getName() {
         return name;
@@ -43,11 +44,11 @@ public class CategoryEntity extends Generic {
         this.description = description;
     }
 
-    public List<Product> getProducts() {
+    public List<ProductEntity> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<ProductEntity> products) {
         this.products = products;
     }
 }

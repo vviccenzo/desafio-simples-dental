@@ -41,8 +41,8 @@ public class ProductEntity extends Generic {
     @Column(name = "code", nullable = true)
     private String code;
 
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
+    @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties({ "products" })
     private CategoryEntity category;
 

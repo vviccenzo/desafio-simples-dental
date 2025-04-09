@@ -8,6 +8,7 @@ import com.simplesdental.product.model.Generic;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -25,7 +26,7 @@ public class CategoryEntity extends Generic {
     private String description;
 
     @JsonIgnoreProperties({ "category" })
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<ProductEntity> products;
 
     public String getName() {

@@ -18,10 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.simplesdental.product.model.Category;
 import com.simplesdental.product.service.CategoryService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/categories")
+@Tag(name = "Categorias v1", description = "Endpoints relacionados a operações com categorias v1")
 public class CategoryController {
 
     private final CategoryService categoryService;

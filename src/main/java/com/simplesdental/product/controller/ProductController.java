@@ -18,10 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.simplesdental.product.model.Product;
 import com.simplesdental.product.service.ProductService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/products")
+@Tag(name = "Produtos v1", description = "Endpoints relacionados a operações com produtos v1")
 public class ProductController {
 
     private final ProductService productService;

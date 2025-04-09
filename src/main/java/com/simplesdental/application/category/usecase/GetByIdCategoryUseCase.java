@@ -12,7 +12,6 @@ import com.simplesdental.domain.category.entities.Category;
 public class GetByIdCategoryUseCase implements GetCategoryByIdGateway {
 
     private static final Logger logger = LogManager.getLogger(GetByIdCategoryUseCase.class);
-
     private final CategoryRepositoryGateway categoryRepositoryGateway;
 
     public GetByIdCategoryUseCase(CategoryRepositoryGateway categoryRepositoryGateway) {
@@ -21,8 +20,9 @@ public class GetByIdCategoryUseCase implements GetCategoryByIdGateway {
 
     @Override
     public Optional<Category> execute(Long id) {
-        logger.info("Buscando produto com ID: {}", id);
-        return this.categoryRepositoryGateway.findById(id);
+        logger.info("Buscando categoria com ID: {}", id);
+        Optional<Category> category = this.categoryRepositoryGateway.findById(id);
+        logger.info("Categoria {}encontrada com ID: {}", category.isPresent() ? "" : "não ", id);
+        return category;
     }
-
 }

@@ -2,7 +2,7 @@ package com.simplesdental.domain.product.entities;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.simplesdental.domain.category.entities.Category;
 
 public class Product {
@@ -19,7 +19,7 @@ public class Product {
 
     private String code;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonIgnore
     private Category category;
 
     public Long getId() {

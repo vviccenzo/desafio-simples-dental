@@ -2,8 +2,6 @@ package com.simplesdental.infra.product.dto;
 
 import java.math.BigDecimal;
 
-import com.simplesdental.infra.category.dto.CategoryCreateDto;
-
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -19,15 +17,15 @@ public class ProductCreateDto {
     @NotBlank(message = "Description is required")
     private String description;
 
-    @NotBlank(message = "Code is required")
-    private int code;
+    @NotNull(message = "Code is required")
+    private Integer code;
 
     @NotNull
     @Positive
     private BigDecimal price;
 
     @NotNull
-    private CategoryCreateDto category;
+    private Long categoryId;
 
     private Boolean status;
 
@@ -63,12 +61,20 @@ public class ProductCreateDto {
         this.price = price;
     }
 
-    public CategoryCreateDto getCategory() {
-        return category;
+    public int getCode() {
+        return code;
     }
 
-    public void setCategory(CategoryCreateDto category) {
-        this.category = category;
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
 }

@@ -20,6 +20,8 @@ import com.simplesdental.application.product.gateways.GetAllProductGateway;
 import com.simplesdental.application.product.gateways.GetProductByIdGateway;
 import com.simplesdental.application.product.gateways.UpdateProductGateway;
 import com.simplesdental.domain.product.entities.Product;
+import com.simplesdental.infra.product.dto.ProductCreateDto;
+import com.simplesdental.infra.product.dto.ProductUpdateDto;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -59,13 +61,13 @@ public class ProductV2Controller {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product createProduct(@Valid @RequestBody Product product) {
+    public Product createProduct(@Valid @RequestBody ProductCreateDto product) {
         return this.createProductGateway.execute(product);
     }
 
     @PutMapping("/{id}")
-    public Product updateProduct(@PathVariable Long id, @Valid @RequestBody Product product) {
-        return this.updateProductGateway.execute(id).orElse(null);
+    public Product updateProduct(@PathVariable Long id, @Valid @RequestBody ProductUpdateDto product) {
+        return this.updateProductGateway.execute(id, product);
     }
 
     @DeleteMapping("/{id}")

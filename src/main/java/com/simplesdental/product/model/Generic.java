@@ -16,4 +16,7 @@ public abstract class Generic {
         return this.id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

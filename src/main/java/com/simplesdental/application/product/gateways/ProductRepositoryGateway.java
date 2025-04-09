@@ -13,7 +13,7 @@ public interface ProductRepositoryGateway {
 
     public Optional<Product> findById(Long id);
 
-    public void deleteById(Long id);
+    public boolean deleteById(Long id);
 
     public Page<Product> findAll(Pageable pageable);
 

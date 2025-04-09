@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.simplesdental.application.category.gateway.CreateCategoryGateway;
 import com.simplesdental.application.category.gateway.DeleteCategoryByIdGateway;
-import com.simplesdental.application.category.gateway.FindByIdCategoryGateway;
+import com.simplesdental.application.category.gateway.GetCategoryByIdGateway;
 import com.simplesdental.application.category.gateway.GetAllCategoryGateway;
 import com.simplesdental.application.category.gateway.UpdateCategoryGateway;
 import com.simplesdental.domain.category.entities.Category;
@@ -32,12 +32,12 @@ public class CategoryV2Controller {
     private final CreateCategoryGateway createCategoryGateway;
     private final UpdateCategoryGateway updateCategoryGateway;
     private final GetAllCategoryGateway getAllCategoryGateway;
-    private final FindByIdCategoryGateway findByIdCategoryGateway;
+    private final GetCategoryByIdGateway findByIdCategoryGateway;
     private final DeleteCategoryByIdGateway deleteCategoryByIdGateway;
 
     public CategoryV2Controller(
             GetAllCategoryGateway getAllCategoryGateway,
-            FindByIdCategoryGateway findByIdCategoryGateway,
+            GetCategoryByIdGateway findByIdCategoryGateway,
             CreateCategoryGateway createCategoryGateway,
             UpdateCategoryGateway updateCategoryGateway,
             DeleteCategoryByIdGateway deleteCategoryByIdGateway) {

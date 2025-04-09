@@ -1,11 +1,13 @@
 package com.simplesdental.domain.category.mapper;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.data.domain.Page;
 
 import com.simplesdental.domain.category.entities.Category;
 import com.simplesdental.domain.product.entities.Product;
+import com.simplesdental.domain.product.mapper.ProductMapper;
 import com.simplesdental.infra.category.dto.CategoryCreateDto;
 import com.simplesdental.infra.category.persistence.CategoryEntity;
 import com.simplesdental.infra.product.persistence.ProductEntity;
@@ -22,17 +24,7 @@ public class CategoryMapper {
         category.setName(categoryCreateDto.getName());
         category.setDescription(categoryCreateDto.getName());
 
-        List<Product> products = categoryCreateDto.getProducts().stream().map(product -> {
-            Product productEntity = new Product();
-            productEntity.setName(product.getName());
-            productEntity.setDescription(product.getDescription());
-            productEntity.setPrice(product.getPrice());
-            productEntity.setStatus(product.getStatus());
-            productEntity.setCode("CÓDIGO" + Math.random() * 1000);
-
-            return productEntity;
-        }).toList();
-
+        List<Product> products = ProductMapper.toProductListFromDto(categoryCreateDto.getProducts());
         category.setProducts(products);
 
         return category;
@@ -44,23 +36,7 @@ public class CategoryMapper {
         category.setName(categoryEntity.getName());
         category.setDescription(categoryEntity.getName());
 
-        List<Product> products = categoryEntity.getProducts().stream().map(product -> {
-            Product productEntity = new Product();
-            productEntity.setId(product.getId());
-            productEntity.setName(product.getName());
-            productEntity.setDescription(product.getDescription());
-            productEntity.setPrice(product.getPrice());
-            productEntity.setStatus(product.getStatus());
-
-            if (product.getCode() == null) {
-                productEntity.setCode("CÓDIGO" + Math.random() * 1000);
-            } else {
-                productEntity.setCode(product.getCode());
-            }
-
-            return productEntity;
-        }).toList();
-
+        List<Product> products = ProductMapper.toProductListFromEntity(categoryEntity.getProducts());
         category.setProducts(products);
 
         return category;
@@ -71,18 +47,11 @@ public class CategoryMapper {
         categoryEntity.setName(category.getName());
         categoryEntity.setDescription(category.getDescription());
 
-        List<ProductEntity> products = category.getProducts().stream().map(product -> {
-            ProductEntity productEntity = new ProductEntity();
-            productEntity.setName(product.getName());
-            productEntity.setDescription(product.getDescription());
-            productEntity.setPrice(product.getPrice());
-            productEntity.setStatus(product.getStatus());
-            productEntity.setCode("CÓDIGO" + Math.random() * 1000);
-            productEntity.setCategory(categoryEntity);
+        if (Objects.nonNull(category.getId())) {
+            categoryEntity.setId(category.getId());
+        }
 
-            return productEntity;
-        }).toList();
-
+        List<ProductEntity> products = ProductMapper.toProductEntityList(category.getProducts(), categoryEntity);
         categoryEntity.setProducts(products);
 
         return categoryEntity;

@@ -2,6 +2,8 @@ package com.simplesdental.product.controller;
 
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
+import com.simplesdental.v1.controller.ProductController;
+
 @WebMvcTest(ProductController.class)
 public class ProductControllerTest {
 

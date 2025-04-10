@@ -1,6 +1,6 @@
 package com.simplesdental.infra.user.persistence;
 
-import com.simplesdental.product.model.Generic;
+import com.simplesdental.infra.generic.persistence.Generic;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

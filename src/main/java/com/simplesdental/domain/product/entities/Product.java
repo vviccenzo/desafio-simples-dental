@@ -17,7 +17,7 @@ public class Product {
 
     private Boolean status;
 
-    private String code;
+    private Integer code;
 
     @JsonIgnore
     private Category category;
@@ -62,11 +62,11 @@ public class Product {
         this.status = status;
     }
 
-    public String getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 

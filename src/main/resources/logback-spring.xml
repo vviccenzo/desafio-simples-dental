@@ -1,5 +1,4 @@
 <configuration>
-
     <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/info.log</file>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
@@ -32,14 +31,21 @@
         </filter>
     </appender>
 
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <includeCallerData>true</includeCallerData>
+            <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>
+        </encoder>
+    </appender>
+
     <logger name="com.simplesdental" level="DEBUG" additivity="false">
-        <appender-ref ref="INFO_FILE" />
-        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="INFO_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+        <appender-ref ref="CONSOLE"/>
     </logger>
 
+    <!-- Root logger: mantém apenas logs WARN e acima no console -->
     <root level="WARN">
-        <appender-ref ref="INFO_FILE" />
-        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="CONSOLE"/>
     </root>
-
 </configuration>

@@ -3,8 +3,8 @@ package com.simplesdental.infra.category.persistence;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.simplesdental.infra.generic.persistence.Generic;
 import com.simplesdental.infra.product.persistence.ProductEntity;
-import com.simplesdental.product.model.Generic;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

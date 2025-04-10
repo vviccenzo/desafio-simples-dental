@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.simplesdental.infra.category.persistence.CategoryEntity;
-import com.simplesdental.product.model.Generic;
+import com.simplesdental.infra.generic.persistence.Generic;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,7 +39,7 @@ public class ProductEntity extends Generic {
     private Boolean status;
 
     @Column(name = "code", nullable = true)
-    private String code;
+    private Integer code;
 
     @JoinColumn(name = "category_id")
     @ManyToOne(fetch = FetchType.LAZY)
@@ -78,11 +78,11 @@ public class ProductEntity extends Generic {
         this.status = status;
     }
 
-    public String getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 

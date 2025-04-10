@@ -20,12 +20,7 @@ public class ProductMapper {
             productEntity.setDescription(product.getDescription());
             productEntity.setPrice(product.getPrice());
             productEntity.setStatus(product.getStatus());
-
-            if (product.getCode() == null) {
-                productEntity.setCode("CÓDIGO" + Math.random() * 1000);
-            } else {
-                productEntity.setCode(product.getCode());
-            }
+            productEntity.setCode(product.getCode());
 
             return productEntity;
         }).toList();
@@ -54,7 +49,7 @@ public class ProductMapper {
             productEntity.setDescription(product.getDescription());
             productEntity.setPrice(product.getPrice());
             productEntity.setStatus(product.getStatus());
-            productEntity.setCode("CÓDIGO" + Math.random() * 1000);
+            productEntity.setCode(product.getCode());
             productEntity.setCategory(categoryEntity);
 
             return productEntity;
@@ -69,7 +64,7 @@ public class ProductMapper {
         productEntity.setDescription(product.getDescription());
         productEntity.setPrice(product.getPrice());
         productEntity.setStatus(product.getStatus());
-        productEntity.setCode("CÓDIGO" + Math.random() * 1000);
+        productEntity.setCode(product.getCode());
 
         CategoryEntity categoryEntity = CategoryMapper.toCategoryEntity(product.getCategory());
         productEntity.setCategory(categoryEntity);
@@ -84,12 +79,7 @@ public class ProductMapper {
         productEntity.setDescription(product.getDescription());
         productEntity.setPrice(product.getPrice());
         productEntity.setStatus(product.getStatus());
-
-        if (product.getCode() == null) {
-            productEntity.setCode("CÓDIGO" + Math.random() * 1000);
-        } else {
-            productEntity.setCode(product.getCode());
-        }
+        productEntity.setCode(product.getCode());
 
         Category category = CategoryMapper.toCategory(product.getCategory());
         productEntity.setCategory(category);

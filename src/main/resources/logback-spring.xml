@@ -31,10 +31,25 @@
         </filter>
     </appender>
 
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
             <includeCallerData>true</includeCallerData>
             <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -44,7 +59,16 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <!-- Root logger: mantém apenas logs WARN e acima no console -->
+    <logger name="com.simplesdental.appinfo" level="INFO" additivity="false">
+        <appender-ref ref="APP_FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+        <includeCallerData>true</includeCallerData>
+        <jsonGeneratorDecorator class="net.logstash.logback.decorate.PrettyPrintingJsonGeneratorDecorator"/>
+    </encoder>
+
     <root level="WARN">
         <appender-ref ref="CONSOLE"/>
     </root>

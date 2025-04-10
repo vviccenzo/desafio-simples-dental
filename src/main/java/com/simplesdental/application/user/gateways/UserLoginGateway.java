@@ -1,9 +1,10 @@
 package com.simplesdental.application.user.gateways;
 
+import com.simplesdental.infra.user.dto.UserContext;
 import com.simplesdental.infra.user.dto.UserLoginDto;
 
 public interface UserLoginGateway {
     
-    public void execute(UserLoginDto userLoginDto);
+    public UserContext execute(UserLoginDto userLoginDto);
 
 }

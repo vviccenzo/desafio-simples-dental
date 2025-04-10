@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   app:
     build: .
@@ -7,9 +9,15 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/produto
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
+    # networks:
+    #   - backend-network
 
   db:
     image: postgres:15-alpine
@@ -24,7 +32,25 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
     command: postgres -c 'max_connections=500'
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 5s
       timeout: 5s
       retries: 5
+    # networks:
+    #   - backend-network
+
+#   redis:
+#     image: redis:7.2-alpine
+#     command: redis-server --bind 0.0.0.0
+#     healthcheck:
+#       test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+#       interval: 5s
+#       timeout: 5s
+#       retries: 5
+#     networks:
+#       - backend-network
+
+# networks:
+#   # ← CORREÇÃO: Esta seção deve estar no nível raiz
+#   backend-network:
+#     driver: bridge

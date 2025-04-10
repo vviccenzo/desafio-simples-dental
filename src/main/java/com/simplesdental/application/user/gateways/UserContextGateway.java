@@ -4,6 +4,6 @@ import com.simplesdental.infra.user.dto.UserContext;
 
 public interface UserContextGateway {
     
-    public UserContext execute();
+    public UserContext execute(String email);
 
 }

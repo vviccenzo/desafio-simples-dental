@@ -3,6 +3,7 @@ package com.simplesdental.infra.user.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -49,9 +50,9 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "Login bem-sucedido"),
             @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
     })
-    public ResponseEntity<Void> login(@Valid @RequestBody UserLoginDto request) {
-        this.userLoginGateway.execute(request);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<UserContext> login(@Valid @RequestBody UserLoginDto request) {
+        UserContext context = this.userLoginGateway.execute(request);
+        return ResponseEntity.ok(context);
     }
 
     @PostMapping("/auth/register")
@@ -64,13 +65,13 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping("/auth/context")
-    @Operation(summary = "Retorna o contexto do usuário autenticado", description = "Fornece informações sobre o usuário atualmente autenticado.", responses = {
+    @GetMapping("/auth/context/{email}")
+    @Operation(summary = "Retorna id, email e role do usuário autenticado", description = "Retorna as informações do usuário autenticado a partir do ID presente no contexto da sessão.", responses = {
             @ApiResponse(responseCode = "200", description = "Informações do usuário autenticado", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserContext.class))),
             @ApiResponse(responseCode = "401", description = "Usuário não autenticado")
     })
-    public ResponseEntity<UserContext> getUserContext() {
-        UserContext context = this.userContextGateway.execute();
+    public ResponseEntity<UserContext> getUserContext(@PathVariable String email) {
+        UserContext context = this.userContextGateway.execute(email);
         return ResponseEntity.ok(context);
     }
 

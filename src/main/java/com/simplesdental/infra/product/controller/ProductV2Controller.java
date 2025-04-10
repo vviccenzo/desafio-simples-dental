@@ -34,7 +34,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v2/products")
-@Tag(name = "Produtos v2", description = "Endpoints relacionados a operações com produtos v2")
+@Tag(name = "v2.Produtos", description = "Endpoints relacionados a operações com produtos v2")
 public class ProductV2Controller {
 
         private final GetAllProductGateway getAllProductGateway;

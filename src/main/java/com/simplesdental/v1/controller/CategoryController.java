@@ -23,7 +23,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/categories")
-@Tag(name = "Categorias v1", description = "Endpoints relacionados a operações com categorias v1")
+@Tag(name = "v1.Categorias", description = "Endpoints relacionados a operações com categorias v1")
 public class CategoryController {
 
     private final CategoryService categoryService;

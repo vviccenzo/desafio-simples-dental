@@ -33,8 +33,9 @@ public class TokenProvider {
     public static boolean validateToken(String token) {
         try {
             Jwts.parser()
+                    .setSigningKey(getSigningKey())
                     .build()
-                    .parseSignedClaims(token);
+                    .parseClaimsJws(token);
             return true;
         } catch (ExpiredJwtException e) {
             System.out.println("Token expirado: " + e.getMessage());
@@ -47,6 +48,7 @@ public class TokenProvider {
     public static String getEmailFromToken(String token) {
         try {
             Claims claims = Jwts.parser()
+                    .setSigningKey(getSigningKey())
                     .build()
                     .parseSignedClaims(token)
                     .getPayload();

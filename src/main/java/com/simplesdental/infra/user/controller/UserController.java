@@ -2,6 +2,8 @@ package com.simplesdental.infra.user.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -65,13 +67,16 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping("/auth/context/{email}")
+    @GetMapping("/auth/context")
     @Operation(summary = "Retorna id, email e role do usuário autenticado", description = "Retorna as informações do usuário autenticado a partir do ID presente no contexto da sessão.", responses = {
             @ApiResponse(responseCode = "200", description = "Informações do usuário autenticado", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserContext.class))),
             @ApiResponse(responseCode = "401", description = "Usuário não autenticado")
     })
-    public ResponseEntity<UserContext> getUserContext(@PathVariable String email) {
-        UserContext context = this.userContextGateway.execute(email);
+    public ResponseEntity<UserContext> getUserContext() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userEmail = authentication.getName();
+        UserContext context = userContextGateway.execute(userEmail);
+
         return ResponseEntity.ok(context);
     }
 

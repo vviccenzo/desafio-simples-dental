@@ -22,7 +22,7 @@ public class GetByIdCategoryUseCase implements GetCategoryByIdGateway {
     public Optional<Category> execute(Long id) {
         logger.info("Buscando categoria com ID: {}", id);
         Optional<Category> category = this.categoryRepositoryGateway.findById(id);
-        logger.info("Categoria {}encontrada com ID: {}", category.isPresent() ? "" : "não ", id);
+        logger.info("Categoria {} encontrada com ID: {}", category.isPresent() ? "" : "não ", id);
         return category;
     }
 }

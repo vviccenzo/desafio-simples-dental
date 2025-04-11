@@ -1,4 +1,4 @@
-package com.simplesdental.security;
+package com.simplesdental.infra.security;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;

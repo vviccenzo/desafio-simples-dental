@@ -1,4 +1,4 @@
-package com.simplesdental.security;
+package com.simplesdental.infra.security;
 
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
@@ -11,8 +11,8 @@ import io.jsonwebtoken.security.Keys;
 
 public class TokenProvider {
 
-    private static final String SECRET_KEY = "MinhaChaveSecretaSuperSeguraQueDeveSerGuardadaComSegredo";
-    private static final long EXPIRATION_TIME = 1000 * 60 * 60; // 1 hora
+    private static final String SECRET_KEY = "qIt7n$Lp3@vR8m#wFx2z9Ct5eY6sUo1A";
+    private static final long EXPIRATION_TIME = 1000 * 60 * 60;
 
     private static Key getSigningKey() {
         byte[] keyBytes = SECRET_KEY.getBytes(StandardCharsets.UTF_8);
@@ -30,6 +30,7 @@ public class TokenProvider {
                 .compact();
     }
 
+    @SuppressWarnings("deprecation")
     public static boolean validateToken(String token) {
         try {
             Jwts.parser()
@@ -45,6 +46,7 @@ public class TokenProvider {
         return false;
     }
 
+    @SuppressWarnings("deprecation")
     public static String getEmailFromToken(String token) {
         try {
             Claims claims = Jwts.parser()

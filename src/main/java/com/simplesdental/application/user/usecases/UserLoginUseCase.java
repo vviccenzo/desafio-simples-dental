@@ -3,10 +3,10 @@ package com.simplesdental.application.user.usecases;
 import com.simplesdental.application.user.gateways.UserLoginGateway;
 import com.simplesdental.application.user.gateways.UserRepositoryGateway;
 import com.simplesdental.domain.user.entities.User;
+import com.simplesdental.infra.security.PasswordEncoderUtil;
+import com.simplesdental.infra.security.TokenProvider;
 import com.simplesdental.infra.user.dto.UserContext;
 import com.simplesdental.infra.user.dto.UserLoginDto;
-import com.simplesdental.security.PasswordEncoderUtil;
-import com.simplesdental.security.TokenProvider;
 
 public class UserLoginUseCase implements UserLoginGateway {
 

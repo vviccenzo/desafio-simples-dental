@@ -15,17 +15,23 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig {
+public class SecurityConfiguration {
 
     @Bean
+    @SuppressWarnings("removal")
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/api/user/auth/login", "/api/user/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/v2/products/**", "/api/v2/categories/**")
+                        .requestMatchers(HttpMethod.POST, "/api/user/auth/login", "/api/user/auth/register")
+                        .permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v2/products/**", "/api/v2/categories/**",
+                                "/api/v2/categories")
                         .hasAnyRole("ADMIN", "USER")
-                        .requestMatchers(HttpMethod.POST, "/api/v2/products", "/api/v2/categories").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/v2/products", "/api/v2/categories")
+                        .hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/v2/products/**", "/api/v2/categories/**")
                         .hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/v2/products/**", "/api/v2/categories/**")

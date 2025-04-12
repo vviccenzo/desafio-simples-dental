@@ -33,6 +33,6 @@ public class UserConfiguration {
 
     @Bean
     public UserUpdatePasswordGateway userUpdatePasswordGateway(UserRepositoryGateway userRepositoryGateway) {
-        return new UserUpdatePasswordUseCase();
+        return new UserUpdatePasswordUseCase(userRepositoryGateway);
     }
 }

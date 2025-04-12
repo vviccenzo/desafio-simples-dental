@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 
 public class UserUpdatePasswordDto {
 
-    private Long userId;
+    private String email;
 
     @NotBlank(message = "Actual password is required")
     private String actualPassword;
@@ -12,10 +12,13 @@ public class UserUpdatePasswordDto {
     @NotBlank(message = "New password is required")
     private String newPassword;
 
-    public UserUpdatePasswordDto(String actualPassword, String newPassword, Long userId) {
+    public UserUpdatePasswordDto() {
+        
+    }
+
+    public UserUpdatePasswordDto(String actualPassword, String newPassword) {
         this.actualPassword = actualPassword;
         this.newPassword = newPassword;
-        this.userId = userId;
     }
 
     public String getActualPassword() {
@@ -34,12 +37,12 @@ public class UserUpdatePasswordDto {
         this.newPassword = newPassword;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }

@@ -15,6 +15,10 @@ public class UserRegisterDto {
     @NotBlank(message = "Password is required")
     private String password;
 
+    public UserRegisterDto() {
+        
+    }
+
     public UserRegisterDto(@NotBlank(message = "Name is required") String name,
             @NotBlank(message = "Email is required") @Pattern(regexp = ".+@.+\\..+", message = "Invalid email") String email,
             @NotBlank(message = "Password is required") String password) {

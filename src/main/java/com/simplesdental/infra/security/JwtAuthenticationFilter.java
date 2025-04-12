@@ -46,17 +46,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             if (StringUtils.hasText(email)) {
                 UserEntity user = userDetailsService.findByEmail(email);
                 if (user != null) {
-                    System.out.println("User authenticated: " + email + "with authorities: " + user.getAuthorities());
+                    System.out.println("Usuário autenticado: " + email + "com autoridades: " + user.getAuthorities());
 
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user,
                             null, user.getAuthorities());
                     authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                 } else {
-                    throw new EntityNotFoundException("User not found with email:" + email);
+                    throw new EntityNotFoundException("Usuário não encontrado com o email:" + email);
                 }
             } else {
-                throw new IllegalArgumentException("Invalid token.");
+                throw new IllegalArgumentException("Token inválido.");
             }
         }
 

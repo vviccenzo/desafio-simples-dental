@@ -10,6 +10,10 @@ public class UserLoginDto {
     @NotBlank(message = "Password is required")
     private String password;
 
+    public UserLoginDto() {
+        
+    }
+
     public UserLoginDto(@NotBlank(message = "Name is required") String email,
             @NotBlank(message = "Password is required") String password) {
         this.email = email;

@@ -47,9 +47,13 @@ public class UserController {
     }
 
     @PostMapping("/auth/login")
-    @Operation(summary = "Realiza login", description = "Autentica um usuário com base nas credenciais fornecidas.", requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Credenciais de login", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserLoginDto.class), examples = @ExampleObject(name = "Exemplo de Login", value = "{ \"email\": \"usuario@exemplo.com\", \"senha\": \"senha123\" }"))), responses = {
+    @Operation(summary = "Realiza login", description = "Autentica um usuário com base nas credenciais fornecidas.", 
+    requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Credenciais de login", 
+    content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserLoginDto.class), 
+    examples = @ExampleObject(name = "Exemplo de Login", value = "{ \"email\": \"usuario@exemplo.com\", \"password\": \"senha123\" }"))), responses = {
             @ApiResponse(responseCode = "200", description = "Login bem-sucedido"),
-            @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
+            @ApiResponse(responseCode = "401", description = "Credenciais inválidas"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
     })
     public ResponseEntity<UserContext> login(@Valid @RequestBody UserLoginDto request) {
         UserContext context = this.userLoginGateway.execute(request);
@@ -57,9 +61,13 @@ public class UserController {
     }
 
     @PostMapping("/auth/register")
-    @Operation(summary = "Registra novos usuários", description = "Registra um novo usuário no sistema.", requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Dados do usuário para registro", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserRegisterDto.class), examples = @ExampleObject(name = "Exemplo de Registro", value = "{ \"nome\": \"Usuário Exemplo\", \"email\": \"usuario@exemplo.com\", \"senha\": \"senha123\" }"))), responses = {
+    @Operation(summary = "Registra novos usuários", description = "Registra um novo usuário no sistema.", 
+    requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, 
+    description = "Dados do usuário para registro", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserRegisterDto.class), 
+    examples = @ExampleObject(name = "Exemplo de Registro", value = "{ \"name\": \"Usuário Exemplo\", \"email\": \"usuario@exemplo.com\", \"password\": \"senha123\" }"))), responses = {
             @ApiResponse(responseCode = "201", description = "Usuário registrado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos")
+            @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado")
     })
     public ResponseEntity<Void> register(@Valid @RequestBody UserRegisterDto request) {
         this.userRegisterGateway.execute(request);
@@ -69,23 +77,32 @@ public class UserController {
     @GetMapping("/auth/context")
     @Operation(summary = "Retorna id, email e role do usuário autenticado", description = "Retorna as informações do usuário autenticado a partir do ID presente no contexto da sessão.", responses = {
             @ApiResponse(responseCode = "200", description = "Informações do usuário autenticado", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserContext.class))),
-            @ApiResponse(responseCode = "401", description = "Usuário não autenticado")
+            @ApiResponse(responseCode = "401", description = "Usuário não autenticado"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
     })
     public ResponseEntity<UserContext> getUserContext() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userEmail = authentication.getName();
-        UserContext context = userContextGateway.execute(userEmail);
+        UserContext context = this.userContextGateway.execute(userEmail);
 
         return ResponseEntity.ok(context);
     }
 
     @PutMapping("/users/password")
-    @Operation(summary = "Atualiza a senha do usuário autenticado", description = "Permite que o usuário autenticado atualize sua senha.", requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Dados para atualização de senha", content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserUpdatePasswordDto.class), examples = @ExampleObject(name = "Exemplo de Atualização de Senha", value = "{ \"senhaAtual\": \"senha123\", \"novaSenha\": \"novaSenha123\" }"))), responses = {
+    @Operation(summary = "Atualiza a senha do usuário autenticado", description = "Permite que o usuário autenticado atualize sua senha.", 
+        requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Dados para atualização de senha", 
+        content = @Content(mediaType = "application/json", schema = @Schema(implementation = UserUpdatePasswordDto.class), 
+        examples = @ExampleObject(name = "Exemplo de Atualização de Senha", value = "{ \"actualPassword\": \"senha123\", \"newPassword\": \"novaSenha123\" }"))), responses = {
             @ApiResponse(responseCode = "204", description = "Senha atualizada com sucesso"),
             @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos"),
-            @ApiResponse(responseCode = "401", description = "Usuário não autenticado")
+            @ApiResponse(responseCode = "401", description = "Usuário não autenticado"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
     })
     public ResponseEntity<Void> updatePassword(@Valid @RequestBody UserUpdatePasswordDto request) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userEmail = authentication.getName();
+        request.setEmail(userEmail);
+
         this.userUpdatePasswordGateway.execute(request);
         return ResponseEntity.noContent().build();
     }

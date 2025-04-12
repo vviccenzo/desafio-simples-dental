@@ -7,11 +7,11 @@ import com.simplesdental.domain.product.entities.Product;
 
 public class Category {
 
-    public Long id;
+    private Long id;
 
-    public String name;
+    private String name;
 
-    public String description;
+    private String description;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public List<Product> products;

@@ -60,6 +60,7 @@ public class CategoryV2Controller {
     @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Recupera todas as categorias", description = "Retorna uma lista paginada de categorias disponíveis no sistema.", responses = {
             @ApiResponse(responseCode = "200", description = "Lista de categorias recuperada com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })
     public Page<Category> getAllCategories(@Valid Pageable pageable) {
@@ -72,6 +73,8 @@ public class CategoryV2Controller {
             @Parameter(name = "id", description = "ID da categoria", required = true)
     }, responses = {
             @ApiResponse(responseCode = "200", description = "Categoria encontrada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Category.class))),
+            @ApiResponse(responseCode = "400", description = "ID da categoria inválido"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "404", description = "Categoria não encontrada"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })
@@ -83,11 +86,13 @@ public class CategoryV2Controller {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Cria uma nova categoria", description = "Cria uma nova categoria com os dados fornecidos. O corpo da requisição deve seguir o schema definido.", requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Objeto JSON contendo os dados da categoria a ser criada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = CategoryCreateDto.class), examples = {
+    @Operation(summary = "Cria uma nova categoria", description = "Cria uma nova categoria com os dados fornecidos. O corpo da requisição deve seguir o schema definido.", 
+    requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Objeto JSON contendo os dados da categoria a ser criada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = CategoryCreateDto.class), examples = {
             @ExampleObject(name = "Exemplo de Criação", value = "{ \"name\": \"Categoria A\", \"description\": \"Descrição da Categoria A\", \"products\": [] }")
     })), responses = {
             @ApiResponse(responseCode = "201", description = "Categoria criada com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Category.class))),
             @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos na requisição"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })
     public Category createCategory(@Valid @RequestBody CategoryCreateDto category) {
@@ -95,7 +100,7 @@ public class CategoryV2Controller {
     }
 
     @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Atualiza uma categoria existente", description = "Atualiza os dados de uma categoria existente, identificada pelo seu ID.", parameters = {
             @Parameter(name = "id", description = "ID da categoria a ser atualizada", required = true)
     }, requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Objeto JSON contendo os dados atualizados para a categoria", content = @Content(mediaType = "application/json", schema = @Schema(implementation = CategoryUpdateDto.class), examples = {
@@ -103,11 +108,12 @@ public class CategoryV2Controller {
     })), responses = {
             @ApiResponse(responseCode = "204", description = "Categoria atualizada com sucesso"),
             @ApiResponse(responseCode = "400", description = "Dados inválidos na requisição"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "404", description = "Categoria não encontrada"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })
-    public void updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryUpdateDto category) {
-        this.updateCategoryGateway.execute(id, category);
+    public Category updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryUpdateDto category) {
+        return this.updateCategoryGateway.execute(id, category);
     }
 
     @DeleteMapping("/{id}")
@@ -116,6 +122,7 @@ public class CategoryV2Controller {
             @Parameter(name = "id", description = "ID da categoria a ser removida", required = true)
     }, responses = {
             @ApiResponse(responseCode = "204", description = "Categoria excluída com sucesso"),
+            @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "404", description = "Categoria não encontrada"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })

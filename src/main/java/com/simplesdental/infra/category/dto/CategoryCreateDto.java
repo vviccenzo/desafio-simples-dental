@@ -19,6 +19,14 @@ public class CategoryCreateDto {
 
     private List<ProductCreateDto> products;
 
+    public CategoryCreateDto(@Size(max = 100) @NotBlank(message = "Name is required") String name,
+            @Size(max = 255) @NotBlank(message = "Description is required") String description,
+            List<ProductCreateDto> products) {
+        this.name = name;
+        this.description = description;
+        this.products = products;
+    }
+
     public String getName() {
         return name;
     }

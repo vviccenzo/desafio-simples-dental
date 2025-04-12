@@ -9,7 +9,6 @@ import com.simplesdental.domain.user.entities.User;
 import com.simplesdental.infra.user.dto.UserContext;
 import com.simplesdental.infra.user.dto.UserLoginDto;
 import com.simplesdental.infra.user.dto.UserRegisterDto;
-import com.simplesdental.infra.user.dto.UserUpdatePasswordDto;
 import com.simplesdental.infra.user.persistence.UserEntity;
 import com.simplesdental.infra.user.persistence.UserRole;
 
@@ -21,10 +20,6 @@ public class UserMapper {
 
     public static UserLoginDto toUserLoginDto(String email, String password) {
         return new UserLoginDto(email, password);
-    }
-
-    public static UserUpdatePasswordDto toUserUpdatePasswordDto(String currentPassword, String newPassword, Long userId) {
-        return new UserUpdatePasswordDto(currentPassword, newPassword, userId);
     }
 
     public static UserContext toUserContext(String email, String name, UserRole role, String token) {

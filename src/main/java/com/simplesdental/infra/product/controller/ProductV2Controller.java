@@ -58,6 +58,8 @@ public class ProductV2Controller {
         @ResponseStatus(HttpStatus.OK)
         @Operation(summary = "Recupera todos os produtos", description = "Retorna uma lista paginada de produtos disponíveis no sistema.", responses = {
                         @ApiResponse(responseCode = "200", description = "Lista de produtos recuperada com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+                        @ApiResponse(responseCode = "400", description = "Parâmetros de paginação inválidos"),
+                        @ApiResponse(responseCode = "403", description = "Acesso negado"),
                         @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
         })
         public Page<Product> getAllProducts(@Valid Pageable pageable) {
@@ -70,6 +72,7 @@ public class ProductV2Controller {
                         @Parameter(name = "id", description = "ID do produto", required = true)
         }, responses = {
                         @ApiResponse(responseCode = "200", description = "Produto encontrado", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))),
+                        @ApiResponse(responseCode = "403", description = "Acesso negado"),
                         @ApiResponse(responseCode = "404", description = "Produto não encontrado"),
                         @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
         })
@@ -85,6 +88,7 @@ public class ProductV2Controller {
         })), responses = {
                         @ApiResponse(responseCode = "201", description = "Produto criado com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))),
                         @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos na requisição"),
+                        @ApiResponse(responseCode = "403", description = "Acesso negado"),
                         @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
         })
         public Product createProduct(@Valid @RequestBody ProductCreateDto product) {
@@ -100,6 +104,7 @@ public class ProductV2Controller {
         })), responses = {
                         @ApiResponse(responseCode = "200", description = "Produto atualizado com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Product.class))),
                         @ApiResponse(responseCode = "400", description = "Dados inválidos na requisição"),
+                        @ApiResponse(responseCode = "403", description = "Acesso negado"),
                         @ApiResponse(responseCode = "404", description = "Produto não encontrado"),
                         @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
         })
@@ -113,6 +118,7 @@ public class ProductV2Controller {
                         @Parameter(name = "id", description = "ID do produto a ser removido", required = true)
         }, responses = {
                         @ApiResponse(responseCode = "204", description = "Produto excluído com sucesso"),
+                        @ApiResponse(responseCode = "403", description = "Acesso negado"),
                         @ApiResponse(responseCode = "404", description = "Produto não encontrado"),
                         @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
         })

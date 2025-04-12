@@ -20,9 +20,8 @@ public class GetAllCategoryUseCase implements GetAllCategoryGateway {
 
     @Override
     public Page<Category> execute(Pageable pageable) {
-        logger.info("Buscando todas as categorias com paginação: {}", pageable);
         Page<Category> result = this.categoryRepository.findAll(pageable);
-        logger.info("Total de categorias encontradas: {}", result.getTotalElements());
+        logger.info("Total searched: {}", result.getTotalElements());
         return result;
     }
 }

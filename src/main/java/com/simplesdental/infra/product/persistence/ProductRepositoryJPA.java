@@ -7,8 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import com.simplesdental.application.product.gateways.ProductRepositoryGateway;
+import com.simplesdental.application.product.mapper.ProductMapper;
 import com.simplesdental.domain.product.entities.Product;
-import com.simplesdental.domain.product.mapper.ProductMapper;
 
 import jakarta.transaction.Transactional;
 

@@ -7,8 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import com.simplesdental.application.category.gateway.CategoryRepositoryGateway;
+import com.simplesdental.application.category.mapper.CategoryMapper;
 import com.simplesdental.domain.category.entities.Category;
-import com.simplesdental.domain.category.mapper.CategoryMapper;
 
 import jakarta.transaction.Transactional;
 

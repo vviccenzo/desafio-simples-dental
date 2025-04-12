@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 import com.simplesdental.application.category.gateway.GetCategoryByIdGateway;
 import com.simplesdental.application.product.gateways.CreateProductGateway;
 import com.simplesdental.application.product.gateways.ProductRepositoryGateway;
+import com.simplesdental.application.product.mapper.ProductMapper;
 import com.simplesdental.domain.category.entities.Category;
 import com.simplesdental.domain.product.entities.Product;
-import com.simplesdental.domain.product.mapper.ProductMapper;
 import com.simplesdental.infra.product.dto.ProductCreateDto;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -30,13 +30,11 @@ public class CreateProductUseCase implements CreateProductGateway {
 
     @Override
     public Product execute(ProductCreateDto productCreateDto) {
-        logger.debug("Iniciando criação do produto com dados: {}", productCreateDto);
-
         Optional<Category> category = this.getCategoryByIdUseCase.execute(productCreateDto.getCategoryId());
 
         if (category.isEmpty()) {
-            logger.warn("Categoria com ID {} não encontrada.", productCreateDto.getCategoryId());
-            throw new EntityNotFoundException("Categoria com ID " + productCreateDto.getCategoryId() + " não encontrada.");
+            logger.warn("Category with Id: {} not founded.", productCreateDto.getCategoryId());
+            throw new EntityNotFoundException("Category with id: " + productCreateDto.getCategoryId() + " not founded.");
         }
 
         Product productToCreate = ProductMapper.toProduct(productCreateDto);
@@ -44,7 +42,7 @@ public class CreateProductUseCase implements CreateProductGateway {
 
         Product savedProduct = this.productRepositoryGateway.save(productToCreate);
 
-        logger.info("Produto criado com sucesso: {}", savedProduct);
+        logger.info("Product created: {}", savedProduct);
         return savedProduct;
     }
 }

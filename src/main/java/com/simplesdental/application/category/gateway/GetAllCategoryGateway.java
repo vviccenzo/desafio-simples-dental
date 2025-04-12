@@ -7,6 +7,6 @@ import com.simplesdental.domain.category.entities.Category;
 
 public interface GetAllCategoryGateway {
 
-    public Page<Category> execute(Pageable pageable);
+    Page<Category> execute(Pageable pageable);
 
 }

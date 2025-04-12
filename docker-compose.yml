@@ -35,11 +35,11 @@ services:
       timeout: 5s
       retries: 5
 
-#   redis:
-#     image: redis:7.2-alpine
-#     command: redis-server --bind 0.0.0.0
-#     healthcheck:
-#       test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
-#       interval: 5s
-#       timeout: 5s
-#       retries: 5
+  redis:
+    image: redis:7.2-alpine
+    command: redis-server --bind 0.0.0.0
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5

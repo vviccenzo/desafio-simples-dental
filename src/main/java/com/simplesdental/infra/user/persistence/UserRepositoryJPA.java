@@ -5,8 +5,8 @@ import java.util.Objects;
 import org.springframework.stereotype.Repository;
 
 import com.simplesdental.application.user.gateways.UserRepositoryGateway;
+import com.simplesdental.application.user.mapper.UserMapper;
 import com.simplesdental.domain.user.entities.User;
-import com.simplesdental.domain.user.mapper.UserMapper;
 
 import jakarta.persistence.EntityNotFoundException;
 

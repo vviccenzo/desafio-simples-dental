@@ -19,9 +19,8 @@ public class GetAllProductUseCase implements GetAllProductGateway {
     }
 
     public Page<Product> execute(Pageable pageable) {
-        logger.info("Buscando todos os produtos com paginação: {}", pageable);
         Page<Product> result = this.productRepositoryGateway.findAll(pageable);
-        logger.info("Produtos encontrados: {}", result.getTotalElements());
+        logger.info("Products founded: {}", result.getTotalElements());
         return result;
     }
 }

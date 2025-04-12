@@ -17,9 +17,8 @@ public class DeleteCategoryByIdUseCase implements DeleteCategoryByIdGateway {
 
     @Override
     public boolean execute(Long id) {
-        logger.info("Iniciando exclusão da categoria com ID: {}", id);
         boolean deleted = this.categoryRepositoryGateway.deleteById(id);
-        logger.info("Categoria com ID: {} {}", id, deleted ? "excluída com sucesso." : "não encontrada.");
+        logger.info("Category with: {} {}", id, deleted ? "excluded." : "not founded.");
         return deleted;
     }
 }

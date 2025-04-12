@@ -6,6 +6,6 @@ import com.simplesdental.domain.category.entities.Category;
 
 public interface GetCategoryByIdGateway {
 
-    public Optional<Category> execute(Long id);
+    Optional<Category> execute(Long id);
 
 }

@@ -2,6 +2,7 @@ package com.simplesdental.application.user.usecases;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 
 import com.simplesdental.application.user.gateways.UserContextGateway;
 import com.simplesdental.application.user.gateways.UserRepositoryGateway;
@@ -19,12 +20,12 @@ public class UserContextUseCase implements UserContextGateway {
     }
 
     @Override
-    // @Cacheable(value = "userContextCache", key = "#userId")
+    @Cacheable(value = "userContextCache", key = "#email")
     public UserContext execute(String email) {
         logger.info("Searching user by email: {}", email);
         User user = this.userRepositoryGateway.findByEmail(email);
         if (user == null) {
-            return null; 
+            return null;
         }
 
         UserContext context = new UserContext();

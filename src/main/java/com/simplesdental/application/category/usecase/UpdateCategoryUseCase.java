@@ -21,10 +21,9 @@ public class UpdateCategoryUseCase implements UpdateCategoryGateway {
 
     @Override
     public Category execute(Long id, CategoryUpdateDto categoryDto) {
-        logger.info("Iniciando atualização da categoria com ID: {}", id);
         Category categoryToUpdate = this.categoryRepositoryGateway.findById(id)
                 .orElseThrow(() -> {
-                    logger.warn("Categoria com ID: {} não encontrada", id);
+                    logger.warn("Category: {} not founded", id);
                     return new EntityNotFoundException();
                 });
 
@@ -32,7 +31,7 @@ public class UpdateCategoryUseCase implements UpdateCategoryGateway {
         categoryToUpdate.setDescription(categoryDto.getDescription());
 
         Category updated = this.categoryRepositoryGateway.save(categoryToUpdate);
-        logger.info("Categoria com ID: {} atualizada com sucesso", id);
+        logger.info("Category with ID: {} updated", id);
         return updated;
     }
 }

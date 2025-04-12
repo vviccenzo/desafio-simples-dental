@@ -19,9 +19,8 @@ public class GetProductByIdUseCase implements GetProductByIdGateway {
     }
 
     public Optional<Product> execute(Long id) {
-        logger.info("Buscando produto com ID: {}", id);
         Optional<Product> result = this.productRepositoryGateway.findById(id);
-        logger.info("Produto {}encontrado com ID: {}", result.isPresent() ? "" : "não ", id);
+        logger.info("Product {} founded with ID: {}", result.isPresent() ? "" : "no ", id);
         return result;
     }
 }

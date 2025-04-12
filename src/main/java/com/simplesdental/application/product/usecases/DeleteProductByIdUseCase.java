@@ -16,9 +16,8 @@ public class DeleteProductByIdUseCase implements DeleteProductByIdGateway {
 
     @Override
     public boolean execute(Long id) {
-        logger.info("Iniciando exclusão do produto com ID: {}", id);
         boolean result = this.deleteProductByIdGateway.deleteById(id);
-        logger.info("Produto com ID: {} {}", id, result ? "excluído com sucesso." : "não encontrado.");
+        logger.info("Product with id: {} {}", id, result ? "excluded." : "not founded.");
         return result;
     }
 }

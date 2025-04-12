@@ -5,6 +5,6 @@ import com.simplesdental.infra.category.dto.CategoryUpdateDto;
 
 public interface UpdateCategoryGateway {
 
-    public Category execute(Long id, CategoryUpdateDto category);
+    Category execute(Long id, CategoryUpdateDto category);
 
 }

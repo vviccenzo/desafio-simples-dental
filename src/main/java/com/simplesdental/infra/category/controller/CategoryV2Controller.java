@@ -59,7 +59,8 @@ public class CategoryV2Controller {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Recupera todas as categorias", description = "Retorna uma lista paginada de categorias disponíveis no sistema.", responses = {
-            @ApiResponse(responseCode = "200", description = "Lista de categorias recuperada com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+            @ApiResponse(responseCode = "200", description = "Lista de categorias recuperada com sucesso", 
+            content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })
@@ -90,7 +91,8 @@ public class CategoryV2Controller {
     requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(required = true, description = "Objeto JSON contendo os dados da categoria a ser criada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = CategoryCreateDto.class), examples = {
             @ExampleObject(name = "Exemplo de Criação", value = "{ \"name\": \"Categoria A\", \"description\": \"Descrição da Categoria A\", \"products\": [] }")
     })), responses = {
-            @ApiResponse(responseCode = "201", description = "Categoria criada com sucesso", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Category.class))),
+            @ApiResponse(responseCode = "201", description = "Categoria criada com sucesso", 
+            content = @Content(mediaType = "application/json", schema = @Schema(implementation = Category.class))),
             @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos na requisição"),
             @ApiResponse(responseCode = "403", description = "Acesso negado"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")

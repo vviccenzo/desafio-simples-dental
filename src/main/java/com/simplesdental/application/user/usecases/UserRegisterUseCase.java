@@ -2,8 +2,8 @@ package com.simplesdental.application.user.usecases;
 
 import com.simplesdental.application.user.gateways.UserRegisterGateway;
 import com.simplesdental.application.user.gateways.UserRepositoryGateway;
+import com.simplesdental.application.user.mapper.UserMapper;
 import com.simplesdental.domain.user.entities.User;
-import com.simplesdental.domain.user.mapper.UserMapper;
 import com.simplesdental.infra.security.PasswordEncoderUtil;
 import com.simplesdental.infra.user.dto.UserRegisterDto;
 

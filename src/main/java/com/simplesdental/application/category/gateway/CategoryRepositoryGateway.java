@@ -9,12 +9,12 @@ import com.simplesdental.domain.category.entities.Category;
 
 public interface CategoryRepositoryGateway {
 
-    public Optional<Category> findById(Long id);
+    Optional<Category> findById(Long id);
 
-    public Category save(Category category);
+    Category save(Category category);
 
-    public Page<Category> findAll(Pageable pageable);
+    Page<Category> findAll(Pageable pageable);
 
-    public boolean deleteById(Long id);
+    boolean deleteById(Long id);
 
 }

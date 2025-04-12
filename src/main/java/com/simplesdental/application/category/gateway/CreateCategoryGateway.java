@@ -5,6 +5,6 @@ import com.simplesdental.infra.category.dto.CategoryCreateDto;
 
 public interface CreateCategoryGateway {
 
-    public Category execute(CategoryCreateDto category);
+    Category execute(CategoryCreateDto category);
 
 }

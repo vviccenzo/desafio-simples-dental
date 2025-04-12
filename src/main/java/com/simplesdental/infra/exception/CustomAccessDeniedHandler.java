@@ -1,7 +1,6 @@
 package com.simplesdental.infra.exception;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 

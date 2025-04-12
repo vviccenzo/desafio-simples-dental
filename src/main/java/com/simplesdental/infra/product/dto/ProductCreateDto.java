@@ -9,72 +9,72 @@ import jakarta.validation.constraints.Size;
 
 public class ProductCreateDto {
 
-    @Size(max = 100)
-    @NotBlank(message = "Name is required")
-    private String name;
+	private Long categoryId;
 
-    @Size(max = 255)
-    @NotBlank(message = "Description is required")
-    private String description;
+	@Size(max = 100)
+	@NotBlank(message = "Name is required")
+	private String name;
 
-    @NotNull(message = "Code is required")
-    private Integer code;
+	@Size(max = 255)
+	@NotBlank(message = "Description is required")
+	private String description;
 
-    @NotNull
-    @Positive
-    private BigDecimal price;
+	@NotNull(message = "Code is required")
+	private Integer code;
 
-    @NotNull
-    private Long categoryId;
+	@NotNull(message = "Price is required")
+	@Positive
+	private BigDecimal price;
 
-    private Boolean status;
+	@NotNull(message = "Status is required")
+	private Boolean status;
 
-    public Boolean getStatus() {
-        return status;
-    }
+	public Boolean getStatus() {
+		return status;
+	}
 
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+	public BigDecimal getPrice() {
+		return price;
+	}
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
-    public int getCode() {
-        return code;
-    }
+	public int getCode() {
+		return code;
+	}
 
-    public void setCode(int code) {
-        this.code = code;
-    }
+	public void setCode(int code) {
+		this.code = code;
+	}
 
-    public Long getCategoryId() {
-        return categoryId;
-    }
+	public Long getCategoryId() {
+		return categoryId;
+	}
 
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+	}
 
 }

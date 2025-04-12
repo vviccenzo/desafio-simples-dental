@@ -39,28 +39,30 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-
-        String token = getTokenFromRequest(request);
-        if (StringUtils.hasText(token)) {
-            String email = TokenProvider.getEmailFromToken(token);
-            if (StringUtils.hasText(email)) {
-                UserEntity user = userDetailsService.findByEmail(email);
-                if (user != null) {
-                    System.out.println("Usuário autenticado: " + email + "com autoridades: " + user.getAuthorities());
-
-                    UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user,
-                            null, user.getAuthorities());
-                    authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
+        try {
+            String token = getTokenFromRequest(request);
+            if (StringUtils.hasText(token)) {
+                String email = TokenProvider.getEmailFromToken(token);
+                if (StringUtils.hasText(email)) {
+                    UserEntity user = userDetailsService.findByEmail(email);
+                    if (user != null) {
+                        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                                user, null, user.getAuthorities());
+                        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                        SecurityContextHolder.getContext().setAuthentication(authentication);
+                    } else {
+                        throw new EntityNotFoundException("User not found with email: " + email);
+                    }
                 } else {
-                    throw new EntityNotFoundException("Usuário não encontrado com o email:" + email);
+                    throw new IllegalArgumentException("Invalid Token.");
                 }
-            } else {
-                throw new IllegalArgumentException("Token inválido.");
             }
+            filterChain.doFilter(request, response);
+        } catch (IllegalArgumentException | EntityNotFoundException ex) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.setContentType("application/json");
+            response.getWriter().write("{\"error\": \"Authentication Failed\", \"message\": \"" + ex.getMessage() + "\"}");
         }
-
-        filterChain.doFilter(request, response);
     }
 
     private String getTokenFromRequest(HttpServletRequest request) {

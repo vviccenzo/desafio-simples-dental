@@ -21,7 +21,7 @@ public class UserContextUseCase implements UserContextGateway {
     @Override
     // @Cacheable(value = "userContextCache", key = "#userId")
     public UserContext execute(String email) {
-        logger.info("Executando a consulta para o usuário {}", email);
+        logger.info("Searching user by email: {}", email);
         User user = this.userRepositoryGateway.findByEmail(email);
         if (user == null) {
             return null; 

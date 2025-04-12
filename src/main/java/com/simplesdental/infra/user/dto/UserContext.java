@@ -9,6 +9,7 @@ public class UserContext implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long id;
 
     private String email;

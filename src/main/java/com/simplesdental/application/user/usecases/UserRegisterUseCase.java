@@ -17,7 +17,7 @@ public class UserRegisterUseCase implements UserRegisterGateway {
 
     public void execute(UserRegisterDto userRegisterDto) {
         if (this.userRepositoryGateway.existsByEmail(userRegisterDto.getEmail())) {
-            throw new RuntimeException("Usuário já existe.");
+            throw new RuntimeException("User already exists");
         }
 
         User user = UserMapper.toUser(userRegisterDto);

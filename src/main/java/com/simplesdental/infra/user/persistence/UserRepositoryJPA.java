@@ -23,7 +23,7 @@ public class UserRepositoryJPA implements UserRepositoryGateway {
     public User findByEmail(String email) {
         UserEntity userEntity = this.userRepository.findByEmail(email);
         if (Objects.isNull(userEntity)) {
-            throw new EntityNotFoundException("Usuário não encontrado com o email: " + email);
+            throw new EntityNotFoundException("User not founded with email: " + email);
         }
 
         return UserMapper.toUser(userEntity);

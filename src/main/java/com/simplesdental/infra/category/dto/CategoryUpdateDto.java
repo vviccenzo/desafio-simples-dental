@@ -2,21 +2,21 @@ package com.simplesdental.infra.category.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public class CategoryUpdateDto {
 
-    @NotNull(message = "O ID é obrigatório")
+    @NotNull(message = "Id is required")
     private Long id;
 
-    @NotBlank(message = "O nome é obrigatório")
+    @NotBlank(message = "Name is required")
     private String name;
 
-    @NotBlank(message = "A descrição é obrigatória")
+    @Size(max = 255)
     private String description;
 
-    public CategoryUpdateDto(@NotNull(message = "O ID é obrigatório") Long id,
-            @NotBlank(message = "O nome é obrigatório") String name,
-            @NotBlank(message = "A descrição é obrigatória") String description) {
+    public CategoryUpdateDto(@NotNull(message = "Id is required") Long id,
+            @NotBlank(message = "Name is required") String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;

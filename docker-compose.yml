@@ -16,8 +16,6 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-    # networks:
-    #   - backend-network
 
   db:
     image: postgres:15-alpine
@@ -36,8 +34,6 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-    # networks:
-    #   - backend-network
 
 #   redis:
 #     image: redis:7.2-alpine
@@ -47,10 +43,3 @@ services:
 #       interval: 5s
 #       timeout: 5s
 #       retries: 5
-#     networks:
-#       - backend-network
-
-# networks:
-#   # ← CORREÇÃO: Esta seção deve estar no nível raiz
-#   backend-network:
-#     driver: bridge

@@ -19,12 +19,12 @@ public class UserLoginUseCase implements UserLoginGateway {
     public UserContext execute(UserLoginDto userLoginDto) {
         User user = this.userRepositoryGateway.findByEmail(userLoginDto.getEmail());
         if (user == null) {
-            throw new RuntimeException("Usuário não encontrado");
+            throw new RuntimeException("User not found.");
         }
 
         boolean isPasswordValid = PasswordEncoderUtil.matches(userLoginDto.getPassword(), user.getPassword());
         if (!isPasswordValid) {
-            throw new RuntimeException("Senha inválida");
+            throw new RuntimeException("Invalid password.");
         }
 
         String token = TokenProvider.generateToken(user.getEmail(), user.getRole().toString());

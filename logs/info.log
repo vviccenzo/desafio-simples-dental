@@ -1610,3 +1610,835 @@
   "caller_file_name" : "StartupInfoLogger.java",
   "caller_line_number" : 56
 }
+{
+  "@timestamp" : "2025-04-12T12:18:44.3392469-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 22676 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T12:18:44.3490462-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T12:18:51.6393909-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 7.96 seconds (process running for 8.556)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:50:21.6131035-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:50:21.6300903-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:50:29.3027186-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 8.389 seconds (process running for 9.017)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:53:31.5078538-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:53:31.509356-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:53:33.7875857-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 2.327 seconds (process running for 193.502)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:53:58.1053715-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:53:58.1063703-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:53:59.3582409-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.292 seconds (process running for 219.072)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:54:12.4501327-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:54:12.4531324-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:54:13.5453338-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.152 seconds (process running for 233.259)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:56:25.2355114-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:56:25.2375031-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:56:26.4717688-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.29 seconds (process running for 366.186)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:59:11.0942429-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:59:11.0952436-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:59:12.782088-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.738 seconds (process running for 532.496)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:59:14.348253-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:59:14.3492522-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:59:15.5392811-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.222 seconds (process running for 535.253)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:59:17.1156358-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:59:17.1166388-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:59:18.3850901-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.316 seconds (process running for 538.099)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:59:20.9546302-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T16:59:20.9552105-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T16:59:21.6506496-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.719 seconds (process running for 541.365)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T16:59:42.6175969-03:00",
+  "@version" : "1",
+  "message" : "Buscando categoria com ID: 1",
+  "logger_name" : "com.simplesdental.application.category.usecase.GetByIdCategoryUseCase",
+  "thread_name" : "http-nio-8080-exec-4",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "com.simplesdental.application.category.usecase.GetByIdCategoryUseCase",
+  "caller_method_name" : "execute",
+  "caller_file_name" : "GetByIdCategoryUseCase.java",
+  "caller_line_number" : 23
+}
+{
+  "@timestamp" : "2025-04-12T16:59:42.6503144-03:00",
+  "@version" : "1",
+  "message" : "Categoria  encontrada com ID: 1",
+  "logger_name" : "com.simplesdental.application.category.usecase.GetByIdCategoryUseCase",
+  "thread_name" : "http-nio-8080-exec-4",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "com.simplesdental.application.category.usecase.GetByIdCategoryUseCase",
+  "caller_method_name" : "execute",
+  "caller_file_name" : "GetByIdCategoryUseCase.java",
+  "caller_line_number" : 25
+}
+{
+  "@timestamp" : "2025-04-12T17:00:26.2502673-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:00:26.2519352-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:00:27.4492544-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.236 seconds (process running for 607.163)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:01:15.6102307-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:01:15.6143643-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:01:16.5966266-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.054 seconds (process running for 656.311)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:01:22.2753341-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:01:22.2763294-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:01:23.0894741-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.835 seconds (process running for 662.803)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:01:25.7841867-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:01:25.7841867-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:01:26.9841989-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.232 seconds (process running for 666.698)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:01:51.3522398-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:01:51.3552399-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:01:52.2901414-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.975 seconds (process running for 692.004)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:02:46.4126439-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:02:46.4136441-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:02:47.1211608-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.737 seconds (process running for 746.835)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:03:32.0071958-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:03:32.0071958-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:03:35.4136036-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:03:35.4146046-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:03:36.3008537-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.92 seconds (process running for 796.015)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:03:38.0234622-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:03:38.027474-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:03:39.1205117-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 1.132 seconds (process running for 798.834)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:04:25.1524606-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:04:25.1524606-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:04:25.8804687-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.752 seconds (process running for 845.594)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}
+{
+  "@timestamp" : "2025-04-12T17:04:27.4606992-03:00",
+  "@version" : "1",
+  "message" : "Starting ProductApplication using Java 17.0.12 with PID 26484 (C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend\\target\\classes started by vvpro in C:\\Users\\vvpro\\OneDrive\\Documents\\desafio-entrevistas\\simples-dental\\desafio-backend)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarting",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 50
+}
+{
+  "@timestamp" : "2025-04-12T17:04:27.4616978-03:00",
+  "@version" : "1",
+  "message" : "No active profile set, falling back to 1 default profile: \"default\"",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.SpringApplication",
+  "caller_method_name" : "logStartupProfileInfo",
+  "caller_file_name" : "SpringApplication.java",
+  "caller_line_number" : 654
+}
+{
+  "@timestamp" : "2025-04-12T17:04:28.101217-03:00",
+  "@version" : "1",
+  "message" : "Started ProductApplication in 0.667 seconds (process running for 847.815)",
+  "logger_name" : "com.simplesdental.ProductApplication",
+  "thread_name" : "restartedMain",
+  "level" : "INFO",
+  "level_value" : 20000,
+  "caller_class_name" : "org.springframework.boot.StartupInfoLogger",
+  "caller_method_name" : "logStarted",
+  "caller_file_name" : "StartupInfoLogger.java",
+  "caller_line_number" : 56
+}

@@ -14,7 +14,6 @@ public class CategoryCreateDto {
     private String name;
 
     @Size(max = 255)
-    @NotBlank(message = "Description is required")
     private String description;
 
     private List<ProductCreateDto> products;
